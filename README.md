@@ -7,20 +7,47 @@ Generowanie zasięgów dla danego operatu.
 
 # Kontekst projektu
 
-## Po co tu jesteśmy?
+## Po co tu jesteśmy (myśl przewodnia)?
 
-Jesteśmy tu aby zbudować bibliotekę do odczytu formatu plików danych systemu GEO-MAP, która
-będzie wykorzystana w innych projektach.
+Potrzebuję biblioteki do odczytu formatu plików danych systemu GEO-MAP, która będzie wykorzystana w innych projektach.
 
 ## Krótkie podsumowanie
 
+Czym jest produkt i dla kogo?
+
+* dla [docelowy klient]
+* którzy [opis potrzeby lub okazji]
+* produkt [nazwa produktu]
+* jest [kategoria produktu]
+* który [kluczowa korzyść, ważny powód, by kupić]
+* w odróżnieniu od [główna konkurencyjna alternatywa]
+* nasz produkt [opis lub najważniejsza przewaga]
+
 ## Opakowanie produktu
 
-Jak będzie wyglądał ten produkt.
+Jak będzie wyglądał ten produkt:
 
+* Upewnij się że wszystkie cechy przekułeś na zalety!
+* Stwórz hasło reklamowe!
+
+    Nazwa produktu
+	
+	![Dobre zdjęcie](*.jpg)
+
+	Najlepszy slogan tutaj
+	
+	* Korzyść nr 1
+	* Korzyść nr 2
+	* Korzyść nr 3
+	
 ## Lista "NIE"
 
 Czego nie robimy w tym projekcie.
+
+w zakresie | poza zakresem
+---------- | -------------
+           |              
+      nieokreślone
 
 ## Otoczenie projektu
 
