@@ -6,8 +6,8 @@
     <ProjectGuid>{6A1DA428-A1BE-4EE2-838E-9108ED4B0280}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GeoMapView.Testy</RootNamespace>
-    <AssemblyName>GeoMapView.Testy</AssemblyName>
+    <RootNamespace>GeoMapTesty</RootNamespace>
+    <AssemblyName>GeoMapTesty</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -66,6 +66,9 @@
       <Project>{946337d3-b9a0-4da9-9312-4e2c24640d81}</Project>
       <Name>GeoMapReader</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Samples\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

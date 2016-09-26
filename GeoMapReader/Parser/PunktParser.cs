@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeoMapDomena
+namespace GeoMapReader.Parser
 {
-    class Atrybut
+    class PunktParser
     {
     }
 }

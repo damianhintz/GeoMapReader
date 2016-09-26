@@ -7,13 +7,13 @@ using GeoMapDomena;
 
 namespace GeoMapReader.Parser
 {
-    static class KindParser
+    static class NagłówekParser
     {
-        public static TypElementu ParseKind(this string code)
+        public static Nagłówek ParseHeader(this string code)
         {
             int codeValue = int.Parse(code);
-            var kind = new TypElementu(codeValue);
-            throw new NotImplementedException();
+            var header = new Nagłówek(codeValue);
+            return header;
         }
     }
 }

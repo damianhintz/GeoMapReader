@@ -40,9 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parser\AtrybutParser.cs" />
+    <Compile Include="Parser\EtykietaParser.cs" />
     <Compile Include="Parser\HeaderParser.cs" />
     <Compile Include="MapReader.cs" />
-    <Compile Include="Parser\KindParser.cs" />
+    <Compile Include="Parser\NagłówekParser.cs" />
+    <Compile Include="Parser\PunktParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

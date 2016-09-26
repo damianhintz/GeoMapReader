@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace GeoMapDomena
 {
-    class PunktOparcia
+    /// <summary>
+    /// Punkt oparcia obiektu (geometria obiektu).
+    /// </summary>
+    public class PunktOparcia
     {
+        public double X;
+        public double Y;
+        public string Numer;
     }
 }

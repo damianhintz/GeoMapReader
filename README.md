@@ -1,7 +1,13 @@
 GeoMapReader v1.0-beta, 21 września 2016
 ---
 Czytnik plików danych systemu GEO-MAP.  
-Generowanie zasięgów dla danego operatu.  
+
+# Cechy
+
+* prostota
+* odczyt geometrii obiektów
+* odczyt numeru operatu
+* generowanie zasięgów dla danego operatu
 
 # Pomoc
 
@@ -15,13 +21,13 @@ Potrzebuję biblioteki do odczytu formatu plików danych systemu GEO-MAP, która
 
 Czym jest produkt i dla kogo?
 
-* dla [docelowy klient]
-* którzy [opis potrzeby lub okazji]
-* produkt [nazwa produktu]
-* jest [kategoria produktu]
-* który [kluczowa korzyść, ważny powód, by kupić]
-* w odróżnieniu od [główna konkurencyjna alternatywa]
-* nasz produkt [opis lub najważniejsza przewaga]
+* dla mnie i innych
+* którzy potrzebują czytnika plików GEO-MAP
+* produkt GeoMapReader
+* jest biblioteką
+* która pozwala w prosty sposób odczytać dane
+* w odróżnieniu od braku takiego rozwiązania
+* nasz produkt pozwala na odczyt plików systemu GEO-MAP
 
 ## Opakowanie produktu
 
@@ -34,11 +40,11 @@ Jak będzie wyglądał ten produkt:
 	
 	![Dobre zdjęcie](*.jpg)
 
-	Najlepszy slogan tutaj
+	Prosta, szybka i precyzyjna
 	
-	* Korzyść nr 1
-	* Korzyść nr 2
-	* Korzyść nr 3
+	* prostota
+	* szybkość
+	* precyzja
 	
 ## Lista "NIE"
 

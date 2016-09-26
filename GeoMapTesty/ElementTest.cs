@@ -7,7 +7,7 @@ namespace GeoMapTesty
     public class MapElementTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void test_czy_nagłówek()
         {
             //var element = new MapElement(code: 1);
             //element.AddA1("");
