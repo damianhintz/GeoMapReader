@@ -38,10 +38,7 @@ Czym jest produkt i dla kogo?
 
 Jak będzie wyglądał ten produkt:
 
-* Upewnij się że wszystkie cechy przekułeś na zalety!
-* Stwórz hasło reklamowe!
-
-    Nazwa produktu
+    **GeoMapReader**
 	
 	![Dobre zdjęcie](GeoMapReader/Map.ico)
 
@@ -56,9 +53,11 @@ Jak będzie wyglądał ten produkt:
 Czego nie robimy w tym projekcie.
 
 w zakresie | poza zakresem
----------- | -------------
-           |              
-      nieokreślone
+--------------- | -----------------------------------
+odczyt obiektów | to nie będzie edytor plików GEO-MAP
+                | nie będziemy zapisu do pliku
+           budowa zakresów
+           scalenie z plikiem Tango
 
 ## Otoczenie projektu
 
@@ -68,7 +67,7 @@ w zakresie | poza zakresem
 
 Jest to projekt na tydzień.
 
-Ogólny szkic architektury technicznej.
+## Ogólny szkic architektury technicznej.
 
 # Historia
 
@@ -80,7 +79,7 @@ Do zrobienia:
 - [ ] wczytywanie etykiet
 - [x] wczytywanie punktów
 - [ ] atrybuty wielokrotne (#LIST)
-- [ ] indeksowanie obiektów według atrybutu ID
+- [x] wyszukiwanie obiektów według atrybutu ID
 
 2016-09-21 v1.0-alfa
 

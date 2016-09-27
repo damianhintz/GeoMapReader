@@ -22,7 +22,7 @@ namespace GeoMapTesty
             map.AddElement(null);
             Assert.Fail();
         }
-        
+
         [TestMethod]
         public void test_czy_mapa_doda_element_klasy_1()
         {
@@ -60,6 +60,49 @@ namespace GeoMapTesty
             element.DodajPunkt(punkt);
             map.AddElement(element);
             Assert.AreEqual(1, map.Count());
+        }
+
+        [TestMethod]
+        public void test_czy_mapa_zawiera_dodany_id()
+        {
+            var map = new Mapa();
+            var header = new Nagłówek(1234);
+            var element = new ElementMapy(header);
+            var guid = Guid.NewGuid().ToString();
+            var id = new AtrybutOpisowy("ID", guid);
+            element.DodajAtrybut(id);
+            map.AddElement(element);
+            var punktId = map.Szukaj(guid);
+            Assert.AreEqual(expected: guid, actual: punktId.Id);
+        }
+
+        [TestMethod]
+        public void test_czy_mapa_zawiera_dodany_taki_sam_id()
+        {
+            var map = new Mapa();
+            var header = new Nagłówek(1234);
+            var element = new ElementMapy(header);
+            var guid = Guid.NewGuid().ToString();
+            var id = new AtrybutOpisowy("ID", guid);
+            element.DodajAtrybut(id);
+            map.AddElement(element);
+            map.AddElement(element);
+            Assert.AreEqual(expected: 2, actual: map.Count());
+        }
+
+        [TestMethod, ExpectedException(typeof(InvalidOperationException))]
+        public void test_czy_mapa_wyszuka_taki_sam_id()
+        {
+            var map = new Mapa();
+            var header = new Nagłówek(1234);
+            var element = new ElementMapy(header);
+            var guid = Guid.NewGuid().ToString();
+            var id = new AtrybutOpisowy("ID", guid);
+            element.DodajAtrybut(id);
+            map.AddElement(element);
+            map.AddElement(element);
+            map.Szukaj(guid);
+            Assert.Fail();
         }
     }
 }
