@@ -58,6 +58,7 @@
     <Compile Include="ElementTest.cs" />
     <Compile Include="PunktTest.cs" />
     <Compile Include="ElementValidatorTest.cs" />
+    <Compile Include="AtrybutTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeoMapDomena\GeoMapDomena.csproj">

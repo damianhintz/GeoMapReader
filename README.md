@@ -38,15 +38,15 @@ Czym jest produkt i dla kogo?
 
 Jak będzie wyglądał ten produkt:
 
-    **GeoMapReader**
+**GeoMapReader**
 	
-	![Dobre zdjęcie](GeoMapReader/Map.ico)
+![Dobre zdjęcie](GeoMapReader/Map.ico)
 
-	Prosta, szybka i precyzyjna
+Prosta, szybka i precyzyjna biblioteka
 	
-	* prostota
-	* szybkość
-	* precyzja
+* prostota
+* szybkość
+* precyzja
 	
 ## Lista "NIE"
 
@@ -55,9 +55,12 @@ Czego nie robimy w tym projekcie.
 w zakresie | poza zakresem
 --------------- | -----------------------------------
 odczyt obiektów | to nie będzie edytor plików GEO-MAP
-                | nie będziemy zapisu do pliku
-           budowa zakresów
-           scalenie z plikiem Tango
+                | nie będzie zapisu do pliku
+
+nieokreślone | 
+--------------
+budowa zakresów | 
+scalenie z plikiem Tango | 
 
 ## Otoczenie projektu
 
@@ -78,7 +81,7 @@ Do zrobienia:
 - [x] wczytywanie atrybutów
 - [ ] wczytywanie etykiet
 - [x] wczytywanie punktów
-- [ ] atrybuty wielokrotne (#LIST)
+- [x] atrybuty wielokrotne (#LIST)
 - [x] wyszukiwanie obiektów według atrybutu ID
 
 2016-09-21 v1.0-alfa
