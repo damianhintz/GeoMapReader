@@ -57,7 +57,8 @@ Czego nie robimy w tym projekcie.
 w zakresie | poza zakresem
 --------------- | -----------------------------------
 odczyt obiektów | to nie będzie edytor plików GEO-MAP
-                | nie będzie zapisu do pliku
+operaty przypisane do obiektu | nie będzie grupowania obiektów według operatu
+geometria obiektów | nie będzie generowania zakresów
 
 nieokreślone | 
 --------------
@@ -84,7 +85,7 @@ Do zrobienia:
 - [ ] wczytywanie etykiet (L)
 - [x] wczytywanie punktów (P)
 - [x] atrybuty wielokrotne (#LIST)
-- [ ] lista operatów obiektu (KR)
+- [x] lista operatów obiektu (KR)
 - [x] wyszukiwanie obiektów według atrybutu ID
 - [ ] strona kodowa plików GEO-MAP
 - [ ] konstrukcja geometrii obiektu
