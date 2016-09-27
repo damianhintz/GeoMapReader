@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GeoMapDomena.Rozszerzenia;
 
 namespace GeoMapDomena
 {
@@ -16,6 +17,9 @@ namespace GeoMapDomena
 
         #region Atrybuty opisowe
 
+        /// <summary>
+        /// Identyfikator obiektu.
+        /// </summary>
         public string Id
         {
             get
@@ -23,6 +27,33 @@ namespace GeoMapDomena
                 var atrybut = Atrybuty.SingleOrDefault(a => a.Nazwa.Equals("ID"));
                 if (atrybut == null) return string.Empty;
                 return atrybut.Wartość;
+            }
+        }
+
+        /// <summary>
+        /// Lista operatów przypisanych do obiektu.
+        /// </summary>
+        public IEnumerable<Operat> Operaty
+        {
+            get
+            {
+                var atrybut = Atrybuty.SingleOrDefault(a => a.Nazwa.Equals("KR"));
+                var operaty = new List<Operat>();
+                if (atrybut == null) return operaty; //brak operatów
+                if (atrybut.JestListą)
+                {
+                    foreach (var wartość in atrybut)
+                    {
+                        var operat = wartość.ParseOperat();
+                        operaty.Add(operat);
+                    }
+                }
+                else
+                {
+                    var operat = new Operat(atrybut.Wartość);
+                    operaty.Add(operat);
+                }
+                return operaty;
             }
         }
 

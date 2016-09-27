@@ -27,24 +27,39 @@ namespace GeoMapTesty
             Assert.AreEqual(expected: 0, actual: atrybut.Wartości.Count());
         }
 
-        [TestMethod]
-        public void test_czy_atrybut_jest_pustą_listą()
+        [TestMethod, ExpectedException(typeof(InvalidOperationException))]
+        public void test_czy_atrybut_jest_pustą_listą_bez_wartości()
         {
             //:KR[#LIST;]
             var atrybut = new AtrybutOpisowy(nazwa: "KR", wartość: "#LIST;");
             Assert.AreEqual(expected: "KR", actual: atrybut.Nazwa);
-            Assert.AreEqual(expected: "", actual: atrybut.Wartość);
             Assert.IsTrue(atrybut.JestListą);
-            Assert.AreEqual(expected: 1, actual: atrybut.Count());
+            Assert.AreEqual(0, atrybut.Count());
+            var wartość = atrybut.Wartość;
+            Assert.Fail();
         }
 
-        [TestMethod]
-        public void test_czy_atrybut_jest_listą()
+        [TestMethod, ExpectedException(typeof(InvalidOperationException))]
+        public void test_czy_atrybut_jest_listą_z_jedną_wartością_dostępną_tylko_przez_kolekcję()
         {
             //:KR[#LIST;GG-III.6640.1974.2015=42496.48844,PSobczak]
             var atrybut = new AtrybutOpisowy(nazwa: "KR", wartość: "#LIST;GG-III.6640.1974.2015=42496.48844,PSobczak");
             Assert.AreEqual(expected: "KR", actual: atrybut.Nazwa);
-            Assert.AreEqual(expected: "GG-III.6640.1974.2015=42496.48844,PSobczak", actual: atrybut.Wartość);
+            Assert.IsTrue(atrybut.JestListą);
+            Assert.AreEqual(expected: 1, actual: atrybut.Count());
+            Assert.AreEqual(expected: 1, actual: atrybut.Wartości.Count());
+            Assert.AreEqual(expected: "GG-III.6640.1974.2015=42496.48844,PSobczak", actual: atrybut.First());
+            var wartość = atrybut.Wartość;
+            Assert.Fail();
+        }
+
+        [TestMethod]
+        public void test_czy_atrybut_jest_listą_z_jedną_wartością()
+        {
+            //:KR[#LIST;GG-III.6640.1974.2015=42496.48844,PSobczak]
+            var atrybut = new AtrybutOpisowy(nazwa: "KR", wartość: "#LIST;GG-III.6640.1974.2015=42496.48844,PSobczak");
+            Assert.AreEqual(expected: "KR", actual: atrybut.Nazwa);
+            //Assert.AreEqual(expected: "GG-III.6640.1974.2015=42496.48844,PSobczak", actual: atrybut.Wartość);
             Assert.IsTrue(atrybut.JestListą);
             Assert.AreEqual(expected: 1, actual: atrybut.Count());
             Assert.AreEqual(expected: 1, actual: atrybut.Wartości.Count());

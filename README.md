@@ -18,6 +18,8 @@ reader.Load("fileName.map");
 
 # Kontekst projektu
 
+[Zwinny samuraj](https://docs.google.com/document/d/1KzQ8RNV6Y0hWGIU8NrvJ5ZppsC9On_1ciJ9LptcwHBM/edit?usp=sharing)
+
 ## Po co tu jesteśmy (myśl przewodnia)?
 
 Potrzebuję biblioteki do odczytu formatu plików danych systemu GEO-MAP, która będzie wykorzystana w innych projektach.
@@ -70,19 +72,22 @@ scalenie z plikiem Tango |
 
 Jest to projekt na tydzień.
 
-## Ogólny szkic architektury technicznej.
+## Ogólny szkic architektury technicznej
 
 # Historia
 
 Do zrobienia:
 
 - [ ] podręcznik użytkownika
-- [x] wczytywanie nagłówka
-- [x] wczytywanie atrybutów
-- [ ] wczytywanie etykiet
-- [x] wczytywanie punktów
+- [x] wczytywanie nagłówka (*)
+- [x] wczytywanie atrybutów (:)
+- [ ] wczytywanie etykiet (L)
+- [x] wczytywanie punktów (P)
 - [x] atrybuty wielokrotne (#LIST)
+- [ ] lista operatów obiektu (KR)
 - [x] wyszukiwanie obiektów według atrybutu ID
+- [ ] strona kodowa plików GEO-MAP
+- [ ] konstrukcja geometrii obiektu
 
 2016-09-21 v1.0-alfa
 

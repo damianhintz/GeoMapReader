@@ -59,6 +59,8 @@
     <Compile Include="PunktTest.cs" />
     <Compile Include="ElementValidatorTest.cs" />
     <Compile Include="AtrybutTest.cs" />
+    <Compile Include="ElementOperatTest.cs" />
+    <Compile Include="OperatTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeoMapDomena\GeoMapDomena.csproj">
@@ -70,9 +72,7 @@
       <Name>GeoMapReader</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Samples\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

@@ -38,15 +38,50 @@ namespace GeoMapTesty
             var fileName = Path.Combine(@"..\..\..\GeoMapSamples", "Nysa.MAP");
             reader.Load(fileName);
             //A1, A2, A3, A4,A5, A6, TX, DT, KR, MP
-            //var element = map.Single(e => e.Id)
+            var guid = "5B16242D-CAC5-454B-B11B-7592376D1681";
+            var element = map.Szukaj(guid);
             //*4741 65535  40 0.00000000
+            Assert.AreEqual(expected: 4741, actual: element.Nagłówek.Kod);
             //:ID[5B16242D-CAC5-454B-B11B-7592376D1681]
+            Assert.AreEqual(expected: guid, actual: element.Id);
+            //:KR[#LIST;GG-III.6640.2164.2014=42591.38639,Nrudzinska]
+            var operaty = element.Operaty;
+            var operat = operaty.Single();
+            Assert.AreEqual(expected: "GG-III.6640.2164.2014", actual: operat.Numer);
+            Assert.AreEqual(expected: "42591.38639", actual: operat.Data);
+            Assert.AreEqual(expected: "Nrudzinska", actual: operat.Operator);
             //:A2[gwA200]
             //:A4[1]
-            //:TX[przesy’owy#2015-06-01;]
-            //: MP[10]
+            //:MP[10]
             //:DT[42591.38639]
-            //:KR[#LIST;GG-III.6640.2164.2014=42591.38639,Nrudzinska]
+        }
+
+        void test_czy_map_reader_wczyta_operaty_obiektu()
+        {
+            var map = new Mapa();
+            var reader = new MapReader(map);
+            var fileName = Path.Combine(@"..\..\..\GeoMapSamples", "Nysa.MAP");
+            reader.Load(fileName);
+            //A1, A2, A3, A4,A5, A6, TX, DT, KR, MP
+            var guid = "EBD94CBD-70F4-4504-9C76-EE6B44B165E3";
+            var element = map.Szukaj(guid);
+            //*4741 65535  40 0.00000000
+            Assert.AreEqual(expected: 1361, actual: element.Nagłówek.Kod);
+            Assert.AreEqual(expected: 7, actual: element.Atrybuty.Count());
+            Assert.AreEqual(expected: 0, actual: element.Opisy.Count());
+            Assert.AreEqual(expected: 1, actual: element.Punkty.Count());
+            //:ID[5B16242D-CAC5-454B-B11B-7592376D1681]
+            Assert.AreEqual(expected: guid, actual: element.Id);
+            var operaty = element.Operaty;
+            var operat = operaty.Single();
+            Assert.AreEqual(expected: "473-414/70/1988", actual: operat.Numer);
+            Assert.AreEqual(expected: null, actual: operat.Data);
+            Assert.AreEqual(expected: null, actual: operat.Operator);
+            //:A5[473-414/70/1988]
+            //:TX[1988-09-15]
+            //:MP[1]
+            //:DT[42473.57348]
+            //P 1  5591312.865  6460507.470
         }
     }
 }

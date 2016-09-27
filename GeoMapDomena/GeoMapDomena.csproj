@@ -45,10 +45,12 @@
     <Compile Include="Nagłówek.cs" />
     <Compile Include="Mapa.cs" />
     <Compile Include="ElementMapy.cs" />
+    <Compile Include="Operat.cs" />
     <Compile Include="PunktOparcia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rozszerzenia\ElementRozszerzenia.cs" />
     <Compile Include="Rozszerzenia\MapaRozszerzenia.cs" />
+    <Compile Include="Rozszerzenia\OperatRozszerzenia.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
