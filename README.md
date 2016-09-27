@@ -43,7 +43,7 @@ Jak będzie wyglądał ten produkt:
 
     Nazwa produktu
 	
-	![Dobre zdjęcie](*.jpg)
+	![Dobre zdjęcie](GeoMapReader/Map.ico)
 
 	Prosta, szybka i precyzyjna
 	
