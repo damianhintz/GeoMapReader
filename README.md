@@ -1,4 +1,4 @@
-GeoMapReader v1.0-beta, 21 września 2016
+GeoMapReader v1.0-alfa, 21 września 2016
 ---
 Czytnik plików danych systemu GEO-MAP.  
 
@@ -10,6 +10,11 @@ Czytnik plików danych systemu GEO-MAP.
 * generowanie zasięgów dla danego operatu
 
 # Pomoc
+```c#
+var map = new Mapa();
+var reader = new MapReader(mapa);
+reader.Load("fileName.map");
+```
 
 # Kontekst projektu
 
@@ -74,6 +79,7 @@ Do zrobienia:
 - [x] wczytywanie atrybutów
 - [ ] wczytywanie etykiet
 - [x] wczytywanie punktów
+- [ ] atrybuty wielokrotne (#LIST)
 - [ ] indeksowanie obiektów według atrybutu ID
 
 2016-09-21 v1.0-alfa
