@@ -61,7 +61,7 @@ w zakresie | poza zakresem
 
 ## Oszacowania
 
-Czy to projekt na 3, 6, czy 9 miesięcy?
+Jest to projekt na tydzień.
 
 Ogólny szkic architektury technicznej.
 
@@ -70,7 +70,12 @@ Ogólny szkic architektury technicznej.
 Do zrobienia:
 
 - [ ] podręcznik użytkownika
+- [x] wczytywanie nagłówka
+- [x] wczytywanie atrybutów
+- [ ] wczytywanie etykiet
+- [x] wczytywanie punktów
+- [ ] indeksowanie obiektów według atrybutu ID
 
-2016-09-21 v1.0-beta
+2016-09-21 v1.0-alfa
 
-* pierwsza wersja programu
+* [propozycja projektu](https://docs.google.com/document/d/1O7EHPSBacFY5yFfxNs8UU7O_whekDUPvDwXJXS3iZh0/edit?usp=sharing)

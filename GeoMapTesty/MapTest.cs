@@ -15,12 +15,49 @@ namespace GeoMapTesty
             Assert.AreEqual(0, map.Count());
         }
 
+        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
+        public void test_czy_mapa_zawiera_pusty_element()
+        {
+            var map = new Mapa();
+            map.AddElement(null);
+            Assert.Fail();
+        }
+        
         [TestMethod]
-        public void test_czy_mapa_zawiera_dodany_element()
+        public void test_czy_mapa_doda_element_klasy_1()
         {
             var map = new Mapa();
             var header = new Nagłówek(1111);
             var element = new ElementMapy(header);
+            var punkt = new PunktOparcia(x: 1.2, y: 3.4);
+            element.DodajPunkt(punkt);
+            map.AddElement(element);
+            Assert.AreEqual(1, map.Count());
+        }
+
+        [TestMethod]
+        public void test_czy_mapa_doda_element_klasy_4_liniowy()
+        {
+            var map = new Mapa();
+            var header = new Nagłówek(4567);
+            var element = new ElementMapy(header);
+            var punkt = new PunktOparcia(x: 1.2, y: 3.4);
+            element.DodajPunkt(punkt);
+            element.DodajPunkt(punkt);
+            map.AddElement(element);
+            Assert.AreEqual(1, map.Count());
+        }
+
+        [TestMethod]
+        public void test_czy_mapa_doda_element_klasy_5_powierzchniowy()
+        {
+            var map = new Mapa();
+            var header = new Nagłówek(5678);
+            var element = new ElementMapy(header);
+            var punkt = new PunktOparcia(x: 1.2, y: 3.4);
+            element.DodajPunkt(punkt);
+            element.DodajPunkt(punkt);
+            element.DodajPunkt(punkt);
             map.AddElement(element);
             Assert.AreEqual(1, map.Count());
         }

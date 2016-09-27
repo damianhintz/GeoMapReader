@@ -14,5 +14,11 @@ namespace GeoMapDomena
         public double X;
         public double Y;
         public string Numer;
+
+        public PunktOparcia(double x, double y)
+        {
+            X = x;
+            Y = y;
+        }
     }
 }

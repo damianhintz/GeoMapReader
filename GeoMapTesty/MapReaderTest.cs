@@ -12,7 +12,7 @@ namespace GeoMapTesty
     public class MapReaderTest
     {
         [TestMethod]
-        public void test_czy_map_reader_counts()
+        public void test_czy_map_reader_wczyta_wszystkie_obiekty()
         {
             var map = new Mapa();
             var reader = new MapReader(map);
@@ -28,6 +28,25 @@ namespace GeoMapTesty
             Assert.AreEqual(11853, map.ElementyKlasy(5).Count());
             Assert.AreEqual(0, map.ElementyKlasy(6).Count());
             Assert.AreEqual(0, map.ElementyKlasy(7).Count());
+        }
+
+        [TestMethod]
+        public void test_czy_map_reader_wczyta_atrybutu_obiektu()
+        {
+            var map = new Mapa();
+            var reader = new MapReader(map);
+            var fileName = Path.Combine(@"..\..\..\GeoMapSamples", "Nysa.MAP");
+            reader.Load(fileName);
+            //A1, A2, A3, A4,A5, A6, TX, DT, KR, MP
+            //var element = map.Single(e => e.Id)
+            //*4741 65535  40 0.00000000
+            //:ID[5B16242D-CAC5-454B-B11B-7592376D1681]
+            //:A2[gwA200]
+            //:A4[1]
+            //:TX[przesy’owy#2015-06-01;]
+            //: MP[10]
+            //:DT[42591.38639]
+            //:KR[#LIST;GG-III.6640.2164.2014=42591.38639,Nrudzinska]
         }
     }
 }

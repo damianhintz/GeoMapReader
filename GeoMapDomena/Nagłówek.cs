@@ -17,9 +17,9 @@ namespace GeoMapDomena
         public int Obiekt { get { return _code / 1000; } }
         public int Kod { get { return _code; } }
         int _code;
-        int _kolor;
-        int _warstwa;
-        double _os;
+        //int _kolor;
+        //int _warstwa;
+        //double _os;
 
         public Nagłówek(int code)
         {

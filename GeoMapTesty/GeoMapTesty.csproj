@@ -56,6 +56,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MapTest.cs" />
     <Compile Include="ElementTest.cs" />
+    <Compile Include="PunktTest.cs" />
+    <Compile Include="ElementValidatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GeoMapDomena\GeoMapDomena.csproj">

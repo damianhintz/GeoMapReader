@@ -15,7 +15,7 @@ namespace GeoMapDomena
         public string Użytkownik;
         public string Operator;
         public int Liczba { get { return _elementy.Count; } }
-        
+
         public IEnumerable<ElementMapy> Elementy { get { return _elementy; } }
         List<ElementMapy> _elementy = new List<ElementMapy>();
 

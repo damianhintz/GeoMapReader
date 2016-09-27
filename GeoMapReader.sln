@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoMapTesty", "GeoMapTesty\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GeoMapSamples", "GeoMapSamples", "{561DE0EA-251D-4091-8CCE-3DBD3E59EC75}"
 	ProjectSection(SolutionItems) = preProject
+		GeoMapSamples\Format plików MAP.pdf = GeoMapSamples\Format plików MAP.pdf
+		GeoMapSamples\Klasyfikacja obiektów.pdf = GeoMapSamples\Klasyfikacja obiektów.pdf
 		GeoMapSamples\Nysa.MAP = GeoMapSamples\Nysa.MAP
 	EndProjectSection
 EndProject
