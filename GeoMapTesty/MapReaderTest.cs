@@ -55,10 +55,20 @@ namespace GeoMapTesty
             //:A4[1]
             //:MP[10]
             //:DT[42591.38639]
+            var punkty = element.Punkty;
+            Assert.AreEqual(expected: 48, actual: punkty.Count());
+            //P 1  5592428.950  6456095.040   183.6600,3473
+            var pierwszyPunkt = punkty.First();
+            Assert.AreEqual(expected: 5592428.95, actual: pierwszyPunkt.X);
+            Assert.AreEqual(expected: 6456095.04, actual: pierwszyPunkt.Y);
+            //P 1  5591211.100  6455502.380   188.7700,3274
+            var ostatniPunkt = punkty.Last();
+            Assert.AreEqual(expected: 5591211.10, actual: ostatniPunkt.X);
+            Assert.AreEqual(expected: 6455502.38, actual: ostatniPunkt.Y);
         }
 
         [TestMethod]
-        void test_czy_map_reader_wczyta_operaty_obiektu()
+        public void test_czy_map_reader_wczyta_operaty_obiektu()
         {
             var map = new Mapa();
             var reader = new MapReader(map);
@@ -87,7 +97,7 @@ namespace GeoMapTesty
         }
 
         [TestMethod]
-        void test_czy_map_reader_policzy_unikatowe_operaty()
+        public void test_czy_map_reader_policzy_unikatowe_operaty()
         {
             var map = new Mapa();
             var reader = new MapReader(map);
@@ -103,7 +113,7 @@ namespace GeoMapTesty
                     unikatoweOperaty.Add(numer);
                 }
             }
-            Assert.AreEqual(expected: 1, actual: unikatoweOperaty.Count);
+            Assert.AreEqual(expected: 1919, actual: unikatoweOperaty.Count);
         }
     }
 }
