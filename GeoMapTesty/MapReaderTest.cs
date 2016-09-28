@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -56,6 +57,7 @@ namespace GeoMapTesty
             //:DT[42591.38639]
         }
 
+        [TestMethod]
         void test_czy_map_reader_wczyta_operaty_obiektu()
         {
             var map = new Mapa();
@@ -82,6 +84,26 @@ namespace GeoMapTesty
             //:MP[1]
             //:DT[42473.57348]
             //P 1  5591312.865  6460507.470
+        }
+
+        [TestMethod]
+        void test_czy_map_reader_policzy_unikatowe_operaty()
+        {
+            var map = new Mapa();
+            var reader = new MapReader(map);
+            var fileName = Path.Combine(@"..\..\..\GeoMapSamples", "Nysa.MAP");
+            reader.Load(fileName);
+            var unikatoweOperaty = new HashSet<string>();
+            foreach (var element in map)
+            {
+                var operaty = element.Operaty;
+                foreach (var operat in operaty)
+                {
+                    var numer = operat.Numer;
+                    unikatoweOperaty.Add(numer);
+                }
+            }
+            Assert.AreEqual(expected: 1, actual: unikatoweOperaty.Count);
         }
     }
 }
