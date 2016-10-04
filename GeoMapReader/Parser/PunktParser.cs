@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using GeoMapDomena;
 
 namespace GeoMapReader.Parser
@@ -21,8 +21,8 @@ namespace GeoMapReader.Parser
             if (pola.Length < 4) throw new ArgumentException("Rekord punktu oparcia ma za mało pól");
             var xString = pola[2];
             var yString = pola[3];
-            var x = double.Parse(xString);
-            var y = double.Parse(yString);
+            var x = double.Parse(xString, NumberFormatInfo.InvariantInfo);
+            var y = double.Parse(yString, NumberFormatInfo.InvariantInfo);
             var punkt = new PunktOparcia(x, y);
             return punkt;
         }

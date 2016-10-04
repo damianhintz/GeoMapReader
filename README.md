@@ -1,4 +1,4 @@
-GeoMapReader v1.0-beta, 28 września 2016
+GeoMapReader v1.0.1-beta, 4 października 2016
 ---
 Czytnik plików danych systemu GEO-MAP.  
 
@@ -84,14 +84,18 @@ Do zrobienia:
 - [ ] strona kodowa plików GEO-MAP
 - [ ] konstrukcja geometrii obiektu
 
+2016-10-04 v1.0.1-beta
+
+* [x] poprawione wczytywanie mapy dla różnych symboli dziesiętnych w ustawieniach regionalnych
+
 2016-09-28 v1.0-beta
 
-- [x] wczytywanie punktów (P)
-- [x] atrybuty wielokrotne (#LIST)
-- [x] lista operatów obiektu (KR)
-- [x] wyszukiwanie obiektów według atrybutu ID
-- [x] wczytywanie nagłówka (*)
-- [x] wczytywanie atrybutów (:)
+* [x] wczytywanie punktów (P)
+* [x] atrybuty wielokrotne (#LIST)
+* [x] lista operatów obiektu (KR)
+* [x] wyszukiwanie obiektów według atrybutu ID
+* [x] wczytywanie nagłówka (*)
+* [x] wczytywanie atrybutów (:)
 
 2016-09-21 v1.0-alfa
 
