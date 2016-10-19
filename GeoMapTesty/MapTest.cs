@@ -11,14 +11,14 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_mapa_jest_pusta()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             Assert.AreEqual(0, map.Count());
         }
 
         [TestMethod, ExpectedException(typeof(ArgumentNullException))]
         public void test_czy_mapa_zawiera_pusty_element()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             map.AddElement(null);
             Assert.Fail();
         }
@@ -26,10 +26,10 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_mapa_doda_element_klasy_1()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var header = new Nagłówek(1111);
             var element = new ElementMapy(header);
-            var punkt = new PunktOparcia(x: 1.2, y: 3.4);
+            var punkt = new PunktOparciaGeoMap(x: 1.2, y: 3.4);
             element.DodajPunkt(punkt);
             map.AddElement(element);
             Assert.AreEqual(1, map.Count());
@@ -38,10 +38,10 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_mapa_doda_element_klasy_4_liniowy()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var header = new Nagłówek(4567);
             var element = new ElementMapy(header);
-            var punkt = new PunktOparcia(x: 1.2, y: 3.4);
+            var punkt = new PunktOparciaGeoMap(x: 1.2, y: 3.4);
             element.DodajPunkt(punkt);
             element.DodajPunkt(punkt);
             map.AddElement(element);
@@ -51,10 +51,10 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_mapa_doda_element_klasy_5_powierzchniowy()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var header = new Nagłówek(5678);
             var element = new ElementMapy(header);
-            var punkt = new PunktOparcia(x: 1.2, y: 3.4);
+            var punkt = new PunktOparciaGeoMap(x: 1.2, y: 3.4);
             element.DodajPunkt(punkt);
             element.DodajPunkt(punkt);
             element.DodajPunkt(punkt);
@@ -65,7 +65,7 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_mapa_zawiera_dodany_id()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var header = new Nagłówek(1234);
             var element = new ElementMapy(header);
             var guid = Guid.NewGuid().ToString();
@@ -79,7 +79,7 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_mapa_zawiera_dodany_taki_sam_id()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var header = new Nagłówek(1234);
             var element = new ElementMapy(header);
             var guid = Guid.NewGuid().ToString();
@@ -93,7 +93,7 @@ namespace GeoMapTesty
         [TestMethod, ExpectedException(typeof(InvalidOperationException))]
         public void test_czy_mapa_wyszuka_taki_sam_id()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var header = new Nagłówek(1234);
             var element = new ElementMapy(header);
             var guid = Guid.NewGuid().ToString();

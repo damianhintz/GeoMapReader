@@ -1,4 +1,4 @@
-GeoMapReader v1.0.1-beta, 4 października 2016
+GeoMapReader v1.0.2-beta, 19 października 2016
 ---
 Czytnik plików danych systemu GEO-MAP.  
 
@@ -11,7 +11,7 @@ Czytnik plików danych systemu GEO-MAP.
 
 # Pomoc
 ```c#
-var map = new Mapa();
+var map = new MapaGeoMap();
 var reader = new MapReader(mapa);
 reader.Load("fileName.map");
 ```
@@ -83,6 +83,10 @@ Do zrobienia:
 - [ ] wczytywanie etykiet (L)
 - [ ] strona kodowa plików GEO-MAP
 - [ ] konstrukcja geometrii obiektu
+
+2016-10-19 v1.0.2-beta
+
+* [x] aktualizacja: refaktoryzacja nazwy MapaGeoMap i PunktOparaciaGeoMap
 
 2016-10-04 v1.0.1-beta
 

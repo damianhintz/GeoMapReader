@@ -8,7 +8,7 @@ namespace GeoMapDomena.Rozszerzenia
 {
     public static class MapaRozszerzenia
     {
-        public static IEnumerable<ElementMapy> ElementyKlasy(this Mapa map, int klasa)
+        public static IEnumerable<ElementMapy> ElementyKlasy(this MapaGeoMap map, int klasa)
         {
             var elementy1 =
                 from obj

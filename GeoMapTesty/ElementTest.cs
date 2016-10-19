@@ -48,7 +48,7 @@ namespace GeoMapTesty
         {
             var header = new Nagłówek(code: 2345);
             var element = new ElementMapy(header);
-            var punkt = new PunktOparcia(x: 1.2, y: 3.4);
+            var punkt = new PunktOparciaGeoMap(x: 1.2, y: 3.4);
             element.DodajPunkt(punkt);
             element.DodajPunkt(punkt);
         }
@@ -58,7 +58,7 @@ namespace GeoMapTesty
         {
             var header = new Nagłówek(code: 3456);
             var element = new ElementMapy(header);
-            var punkt = new PunktOparcia(x: 1.2, y: 3.4);
+            var punkt = new PunktOparciaGeoMap(x: 1.2, y: 3.4);
             element.DodajPunkt(punkt);
             element.DodajPunkt(punkt);
             element.DodajPunkt(punkt);

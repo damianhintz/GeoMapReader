@@ -9,13 +9,13 @@ namespace GeoMapDomena
     /// <summary>
     /// Punkt oparcia obiektu (geometria obiektu).
     /// </summary>
-    public class PunktOparcia
+    public class PunktOparciaGeoMap
     {
         public double X;
         public double Y;
         public string Numer;
 
-        public PunktOparcia(double x, double y)
+        public PunktOparciaGeoMap(double x, double y)
         {
             X = x;
             Y = y;

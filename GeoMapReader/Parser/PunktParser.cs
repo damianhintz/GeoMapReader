@@ -12,7 +12,7 @@ namespace GeoMapReader.Parser
     /// </summary>
     static class PunktParser
     {
-        public static PunktOparcia ParsePunkt(this string record)
+        public static PunktOparciaGeoMap ParsePunkt(this string record)
         {
             //P 1  5594582.150  6456464.390   180.6200,4046
             if (string.IsNullOrEmpty(record)) throw new ArgumentNullException("Rekord punktu oparcia jest pusty");
@@ -23,7 +23,7 @@ namespace GeoMapReader.Parser
             var yString = pola[3];
             var x = double.Parse(xString, NumberFormatInfo.InvariantInfo);
             var y = double.Parse(yString, NumberFormatInfo.InvariantInfo);
-            var punkt = new PunktOparcia(x, y);
+            var punkt = new PunktOparciaGeoMap(x, y);
             return punkt;
         }
     }

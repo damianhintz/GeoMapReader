@@ -68,8 +68,8 @@ namespace GeoMapDomena
         public IEnumerable<Etykieta> Opisy { get { return _opisy; } }
         List<Etykieta> _opisy = new List<Etykieta>();
 
-        public IEnumerable<PunktOparcia> Punkty { get { return _punkty; } }
-        List<PunktOparcia> _punkty = new List<PunktOparcia>();
+        public IEnumerable<PunktOparciaGeoMap> Punkty { get { return _punkty; } }
+        List<PunktOparciaGeoMap> _punkty = new List<PunktOparciaGeoMap>();
 
         public ElementMapy(Nagłówek header)
         {
@@ -88,7 +88,7 @@ namespace GeoMapDomena
             DodajAtrybut(new AtrybutOpisowy(nazwa, wartość));
         }
 
-        public void DodajPunkt(PunktOparcia punkt)
+        public void DodajPunkt(PunktOparciaGeoMap punkt)
         {
             if (punkt == null) throw new ArgumentNullException();
             _punkty.Add(punkt);
@@ -96,7 +96,7 @@ namespace GeoMapDomena
 
         public void DodajPunkt(double x, double y)
         {
-            var punkt = new PunktOparcia(x, y);
+            var punkt = new PunktOparciaGeoMap(x, y);
             DodajPunkt(punkt);
         }
     }

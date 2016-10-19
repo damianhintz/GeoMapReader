@@ -43,10 +43,10 @@
     <Compile Include="AtrybutOpisowy.cs" />
     <Compile Include="Etykieta.cs" />
     <Compile Include="Nagłówek.cs" />
-    <Compile Include="Mapa.cs" />
+    <Compile Include="MapaGeoMap.cs" />
     <Compile Include="ElementMapy.cs" />
     <Compile Include="Operat.cs" />
-    <Compile Include="PunktOparcia.cs" />
+    <Compile Include="PunktOparciaGeoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rozszerzenia\ElementRozszerzenia.cs" />
     <Compile Include="Rozszerzenia\MapaRozszerzenia.cs" />

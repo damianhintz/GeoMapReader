@@ -14,7 +14,7 @@ namespace GeoMapReader
     /// </summary>
     public class MapReader
     {
-        Mapa _map;
+        MapaGeoMap _map;
 
         bool IsHeader { get { return CurrentRecord.StartsWith("*"); } }
         bool IsAttribute { get { return CurrentRecord.StartsWith(":"); } }
@@ -26,7 +26,7 @@ namespace GeoMapReader
         string[] _allLines;
         int _index;
 
-        public MapReader(Mapa map) { _map = map; }
+        public MapReader(MapaGeoMap map) { _map = map; }
 
         public void Load(string fileName)
         {

@@ -15,7 +15,7 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_map_reader_wczyta_wszystkie_obiekty()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var reader = new MapReader(map);
             var fileName = Path.Combine(@"..\..\..\GeoMapSamples", "Nysa.MAP");
             reader.Load(fileName);
@@ -34,7 +34,7 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_map_reader_wczyta_atrybutu_obiektu()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var reader = new MapReader(map);
             var fileName = Path.Combine(@"..\..\..\GeoMapSamples", "Nysa.MAP");
             reader.Load(fileName);
@@ -70,7 +70,7 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_map_reader_wczyta_operaty_obiektu()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var reader = new MapReader(map);
             var fileName = Path.Combine(@"..\..\..\GeoMapSamples", "Nysa.MAP");
             reader.Load(fileName);
@@ -99,7 +99,7 @@ namespace GeoMapTesty
         [TestMethod]
         public void test_czy_map_reader_policzy_unikatowe_operaty()
         {
-            var map = new Mapa();
+            var map = new MapaGeoMap();
             var reader = new MapReader(map);
             var fileName = Path.Combine(@"..\..\..\GeoMapSamples", "Nysa.MAP");
             reader.Load(fileName);

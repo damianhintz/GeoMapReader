@@ -10,7 +10,7 @@ namespace GeoMapDomena
     /// <summary>
     /// Mapa zbudowana z obiektów.
     /// </summary>
-    public class Mapa : IEnumerable<ElementMapy>
+    public class MapaGeoMap : IEnumerable<ElementMapy>
     {
         public string Użytkownik;
         public string Operator;
